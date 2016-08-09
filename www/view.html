@@ -51,7 +51,7 @@
         var oDocument =null, oViewer =null ;
         var oViewables =null, oViews3D =null, oViews2D =null ;
         $(document).ready (function () {
-            var options ={ 'document': QueryString.urn, 'accessToken': QueryString.token, 'env': 'AutodeskProduction' } ;
+            var options ={ 'document': QueryString.urn, 'accessToken': QueryString.token, 'env': 'AutodeskDevelopment' } ;
             //oViewer =new Autodesk.Viewing.Viewer3D ($("#viewer") [0], {}) ; // No toolbar
             oViewer =new Autodesk.Viewing.Private.GuiViewer3D ($("#viewer") [0], {}) ; // With toolbar
             Autodesk.Viewing.Initializer (options, function () {

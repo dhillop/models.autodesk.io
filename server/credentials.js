@@ -27,7 +27,7 @@ var config ={
 	},
 
 	// If you which to use the Autodesk View & Data API on the staging server, change this url
-	BaseEndPoint: 'https://developer.api.autodesk.com',
+	BaseEndPoint: 'https://developer-dev.api.autodesk.com',
 	Version: 'v1'
 } ;
 
