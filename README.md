@@ -1,6 +1,6 @@
 # models.autodesk.io sample
 
-[![build status](https://api.travis-ci.org/cyrillef/models.autodesk.io.png)](https://travis-ci.org/cyrillef/models.autodesk.io)
+[![build status](https://api.travis-ci.org/dhillop/models.autodesk.io.png)](https://travis-ci.org/dhillop/models.autodesk.io)
 [![Node.js](https://img.shields.io/badge/Node.js-5.11.1-blue.svg)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-3.9.3-blue.svg)](https://www.npmjs.com/)
 [![Viewer](https://img.shields.io/badge/Forge%20Viewer-v2.8-green.svg)](http://developer-autodesk.github.io/)
