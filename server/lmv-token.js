@@ -19,7 +19,7 @@
 // UNINTERRUPTED OR ERROR FREE.
 //
 var express =require ('express') ;
-var ForgeOauth2 =require ('forge-oauth2') ;
+var ForgeOauth2 =require ('forge-apis') ;
 var config =require ('./credentials') ;
 
 var router =express.Router () ;
@@ -41,11 +41,17 @@ router.post ('/token', function (req, res) {
 }) ;
 
 var refreshToken =function (credentials, res) {
-	var apiInstance =new ForgeOauth2.TwoLeggedApi () ;
-	apiInstance.authenticate (credentials.client_id, credentials.client_secret, credentials.grant_type, credentials)
-		.then (function (response) {
-			res.json (response) ;
-		})
+
+	var autoRefresh = true; // or false
+
+	var oAuth2TwoLegged = new ForgeOauth2.AuthClientTwoLegged		(credentials.client_id, credentials.client_secret, 
+		credentials.grant_type, autoRefresh);
+
+oAuth2TwoLegged.authenticate().then(function(response){
+    // The `credentials` object contains an access_token that is being used to call the endpoints.
+    // In addition, this object is applied globally on the oAuth2TwoLegged client that you should use when calling secure endpoints.
+	res.json (response) ;
+ })
 		.catch (function (error) {
 			if ( error.statusCode )
 				return (res.status (error.statusCode).end (error.statusMessage)) ;
