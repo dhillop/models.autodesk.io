@@ -27,8 +27,8 @@ var stat =promisify (fs.stat) ;
 var readFile =promisify (fs.readFile) ;
 var crypto =require ('crypto') ;
 
-var ForgeOSS =require ('forge-oss') ;
-var ForgeModelDerivative =require ('forge-model-derivative') ;
+var ForgeOSS =require ('forge-apis') ;
+var ForgeModelDerivative =require ('forge-apis') ;
 
 var config =require ('./credentials') ;
 
