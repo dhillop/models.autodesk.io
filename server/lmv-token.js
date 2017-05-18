@@ -45,7 +45,7 @@ var refreshToken =function (credentials, res) {
 	var autoRefresh = true; // or false
 
 	var oAuth2TwoLegged = new ForgeOauth2.AuthClientTwoLegged		(credentials.client_id, credentials.client_secret, 
-		credentials.grant_type, autoRefresh);
+		credentials.scope, autoRefresh);
 
 oAuth2TwoLegged.authenticate().then(function(response){
     // The `credentials` object contains an access_token that is being used to call the endpoints.
